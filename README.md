@@ -4,6 +4,7 @@ Implements the MPRIS2 interface for Chrome and Firefox.
 Currently, the following sites are supported with almost all of the capabilities MPRIS2 allows:
 * [YouTube](https://youtube.com)
 * [HookTube](https://hooktube.com)
+* [SoundCloud](https://soundcloud.com)
 
 Pull requests are welcome.
 

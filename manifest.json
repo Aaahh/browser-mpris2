@@ -19,6 +19,11 @@
       "matches": ["*://*.hooktube.com/*", "*://hooktube.com/*"],
       "js": ["providers/hooktube.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["*://soundcloud.com/*"],
+      "js": ["providers/soundcloud.js"],
+      "run_at": "document_start"
     }
   ],
 
