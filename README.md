@@ -12,6 +12,7 @@ Pull requests are welcome.
 2. Next run browser-mpris2/native/install-firefox.py
 3. ???
 4. Profit
+5. Repeat Step 1 everytime you open firefox until this is published to the firefox addon store.
 
 If on GNOME or similar you should be able to take advantage of your new powers immediately.  Otherwise, you can use something like [playerctl](https://github.com/acrisci/playerctl), perhaps bind it to a key or `XF86AudioPlay` and the like if your keyboard has them.
 ## Similar Projects
