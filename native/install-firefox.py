@@ -14,12 +14,18 @@ def die(msg):
 
 def main(args):
     if len(args) < 1:
-        die("You must provide at least the extension ID")
+        args.append("browser-mpris2@gmail.com")
+        args.append(os.path.expanduser("~/bin/chrome-mpris2"))
     elif len(args) < 2:
         args.append(os.path.expanduser("~/bin/chrome-mpris2"))
 
     ext_id = args[0]
     prog_path = args[1]
+    if os.path.isfile(prog_path) and os.access(prog_path, os.R_OK):
+        pass
+    else:
+        os.system("cp "+os.path.realpath("chrome-mpris2")+" "+prog_path+" && chmod a+x "+prog_path)
+        print("chrome-mpris2 installed to ~"+prog_path)
 
     # Chrome's extension IDs are in hexadecimal but using a-p, referred
     # internally as "mpdecimal".            https://stackoverflow.com/a/2050916
@@ -53,6 +59,8 @@ def main(args):
     os.makedirs(MESSAGE_HOSTS, exist_ok=True)
     with open(manifest_path, "w") as f:
         json.dump(manifest, f)
+
+    print("chrome-mpris2 installed.")
 
 
 if __name__ == "__main__":
